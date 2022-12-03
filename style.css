@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #cd8b8b 0%, #74b741 100%);
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.mobile-container{
+  background: cyan;
+  width: 400px;
+  box-shadow: 0 0  10px 2px #31a;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 50px auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+header input{
+  background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  width: 350px;
+}
+
+header button{
+  background-color: transparent;
+  margin-left: 10px;
+  border: none;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.fav-container{
+  background-color:#ba5bee ;
+  padding: 0.25rem 1rem;
+  text-align: center;
+}
+
+.fav-meals{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fav-meals li{
+  position: relative;
+  margin: 5px;
+  width: 85px;
+  cursor: pointer;
+}
+
+.fav-meals li .clear{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: -0.1rem;
+  cursor: pointer;
+  opacity: 0;
+  font-size:1rem;
+  top: -0.1rem;
+}
+
+.fav-meals li:hover .clear{
+  opacity: 1;
+}
+
+.fav-meals li img{
+  border-radius: 50%;
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+  border: 1px solid yellow ;
+  box-shadow: 0 0 10px 2px rgba(225, 24, 54, 0.719);
+}
+
+.fav-meals li span{
+  font-size: 0.9rem;
+  display: inline-block;
+  white-space: nowrap;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal{
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(225, 24, 54, 0.719);
+  cursor: pointer;
+  margin: 1.5rem;
+  overflow: hidden;
+}
+
+.meal-info p{
+  text-align: justify;
+}
+
+.meal-header{
+  position: relative;
+}
+
+.meal-header .random{
+  position: absolute;
+  top: 1rem;
+  background-color: #fff;
+  padding: 0.25rem 1rem;
+  border-top-right-radius:5px ;
+  border-bottom-right-radius:5px ;
+}
+
+.meal-header img{
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.meal-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.meal-body .fav-btn{
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: rgb(155, 153, 164);
+  cursor: pointer;
+}
+
+.meal-body .fav-btn.active{
+  color: rgb(202, 19, 184);
+}
+
+.popup-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.popup-container.hidden{
+opacity: 0;
+pointer-events: none;
+}
+
+.popup{
+  margin: 5rem;
+  background-color: white;
+  max-width: 500px;
+  border-radius: 5px;
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  max-height: 90vh;
+
+}
+
+.meal-info h1{
+  text-align: center;
+}
+
+/* .meal-info img{
+  width: 30%;
+  height: width;
+  margin: 0 35%;
+} */
+
+.popup .close-popup{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
